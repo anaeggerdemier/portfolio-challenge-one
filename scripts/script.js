@@ -1,1 +1,11 @@
-//A validação do formulário com javascript é considerado um desafio extra, não é preciso fazer esta validação para realizar sua entrega
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const menu = document.querySelector('.navegacao__lista');
+            if (menu) {
+                menu.classList.toggle('ativo');
+            }
+        });
+    }
+});

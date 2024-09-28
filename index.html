@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta name="description" content="Portfólio de Ana Caroline Demier, desenvolvedora de software focada em soluções inclusivas.">
+
+    <!-- Favicon e Apple Touch Icon -->
+    <link href="assets/img/favicon.png" rel="icon" sizes="any">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fonte do Projeto Raleway -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <title>My portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-...your-integrity-hash..." crossorigin="anonymous">
+    <title>Meu Portfólio</title>
 </head>
 
 <body>
-    <!-- Menu -->
     <header class="cabecalho">
-        <img class="cabecalho__logo" src="assets/vector.png" alt="Logo">
+        <img class="cabecalho__logo" src="assets/vector.png" alt="Logo de Ana Caroline Demier">
         <h1 class="cabecalho__titulo">Ana Caroline Demier</h1>
-        <nav class="navegacao">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navegacao" aria-label="Navegação principal">
             <ul class="navegacao__lista">
                 <li class="navegacao__elemento"><a href="#sobre-mim">Sobre mim</a></li>
                 <li class="navegacao__elemento"><a href="#habilidades">Habilidades</a></li>
@@ -29,147 +39,224 @@
         </nav>
     </header>
 
-    <!-- Seção de Apresentação -->
-    <section class="apresentacao">
-        <img class="apresentacao__foto" src="assets/profile.png" alt="Foto de perfil">
-        <div class="apresentacao__conteiner">
-            <h2 class="apresentacao__titulo">Howdy! I'm Ana and I am a software developer</h2>
-            <p class="apresentacao__subtitulo">I'm an IT Systems Analysis and Development student, and I am currently participating in the Oracle ONE project at Alura Latam.</p>
-            <ul class="redes">
-                <li class="redes__elemento"><a href="">Github <img src="assets/arrow.png" alt="Seta"></a></li>
-                <li class="redes__elemento"><a href="">Linkedin <img src="assets/arrow.png" alt="Seta"></a></li>
-                <li class="redes__elemento"><a href="">Instagram <img src="assets/arrow.png" alt="Seta"></a></li>
-                <li class="redes__elemento"><a href="">Currículo <img src="assets/arrow.png" alt="Seta"></a></li>
+    <main>
+        <section class="apresentacao">
+            <img class="apresentacao__foto" src="assets/profile.png" alt="Foto de perfil de Ana Caroline Demier">
+            <div class="apresentacao__conteiner">
+                <h2 class="apresentacao__titulo">Howdy! I'm Ana and I am a software developer</h2>
+                <p class="apresentacao__subtitulo">I'm an IT Systems Analysis and Development student, and I am currently participating in the Oracle ONE project at Alura Latam.</p>
+                <ul class="redes">
+                    <li class="redes__elemento"><a href="https://github.com" target="_blank" rel="noopener" aria-label="Github">Github <img src="assets/arrow.png" alt="Seta"></a></li>
+                    <li class="redes__elemento"><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Linkedin">Linkedin <img src="assets/arrow.png" alt="Seta"></a></li>
+                    <li class="redes__elemento"><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram <img src="assets/arrow.png" alt="Seta"></a></li>
+                    <li class="redes__elemento"><a href="link-para-curriculo.pdf" target="_blank" rel="noopener" aria-label="Currículo">Currículo <img src="assets/arrow.png" alt="Seta"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="sobre-mim" id="sobre-mim">
+            <h2 class="sobre-mim__titulo">Sobre mim</h2>
+            <p class="sobre-mim__texto">I am a <strong>Software Developer</strong> focused on fostering collaboration and creating inclusive solutions, with a strong emphasis on <strong>User Experience (UX)</strong></p>
+            <p class="sobre-mim__texto">I am passionate about leveraging software development to drive social impact, crafting innovative and equitable solutions that address real-world challenges. 
+                <strong>At BRAVAS In Tech</strong>, I lead initiatives that advocate for women’s inclusion in technology, managing projects, moderating communities, curating content, and fostering interactions to strengthen the tech ecosystem.
+            </p>
+            <img class="sobre-mim__assinatura" src="assets/signature.png" alt="Assinatura de Ana Caroline Demier">
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h2 class="habilidades__titulo">Habilidades</h2>
+            <ul class="habilidades__lista">
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icone" src="assets/html.png" alt="HTML 5">
+                    <p class="habilidades__nome">HTML 5</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icone" src="assets/js_icon.png" alt="JavaScript">
+                    <p class="habilidades__nome">JavaScript</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icone" src="assets/php_icon.png" alt="PHP">
+                    <p class="habilidades__nome">PHP</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icone" src="assets/nodejs_icon.png" alt="Node.js">
+                    <p class="habilidades__nome">Node.js</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icone" src="assets/react_icon.png" alt="React">
+                    <p class="habilidades__nome">React</p>
+                </li>
+                <li class="habilidades__elemento">
+                    <img class="habilidades__icone" src="assets/css_icon.png" alt="CSS">
+                    <p class="habilidades__nome">CSS</p>
+                </li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção sobre mim -->
-    <section class="sobre-mim" id="sobre-mim">
-        <h2 class="sobre-mim__titulo">About me</h2>
-        <p class="sobre-mim__texto">I am a <strong>Software Developer</strong> focused on fostering collaboration and creating inclusive solutions, with a strong emphasis on <strong>User Experience (UX)</strong></p>
-        <p class="sobre-mim__texto">I am passionate about leveraging software development to drive social impact, crafting innovative and equitable solutions that address real-world challenges. 
-            <strong>At BRAVAS In Tech</strong>, I lead initiatives that advocate for women’s inclusion in technology, managing projects, moderating communities, curating content, and fostering interactions to strengthen the tech ecosystem.
-        </p>
-        <!-- Assinatura opcional -->
-        <img class="sobre-mim__assinatura" src="assets/signature.png" alt="Assinatura">
-    </section>
+        <section class="hobbies" id="hobbies">
+            <h2 class="hobbies__titulo">Hobbies</h2>
+            <ul class="hobbies__lista">
+                <li class="hobbies__elemento">
+                    <img class="hobbies__icone" src="assets/skate_icon.png" alt="Skate">
+                    <p class="hobbies__nome">Skate</p>
+                </li>
+                <li class="hobbies__elemento">
+                    <img class="hobbies__icone" src="assets/guitar_icon.png" alt="Tocar baixo">
+                    <p class="hobbies__nome">Tocar baixo</p>
+                </li>
+                <li class="hobbies__elemento">
+                    <img class="hobbies__icone" src="assets/headphones_icon.png" alt="Ouvir música">
+                    <p class="hobbies__nome">Ouvir música</p>
+                </li>
+                <li class="hobbies__elemento">
+                    <img class="hobbies__icone" src="assets/tv_icon.png" alt="Assistir séries">
+                    <p class="hobbies__nome">Assistir séries</p>
+                </li>
+                <li class="hobbies__elemento">
+                    <img class="hobbies__icone" src="assets/forkspoon_icon.png" alt="Cozinhar">
+                    <p class="hobbies__nome">Cozinhar</p>
+                </li>
+                <li class="hobbies__elemento">
+                    <img class="hobbies__icone" src="assets/camera_icon.png" alt="Fotografar">
+                    <p class="hobbies__nome">Fotografar</p>
+                </li>
+            </ul>
+        </section>
 
-    <!-- Seção de Habilidades -->
-    <section class="habilidades" id="habilidades">
-        <h2 class="habilidades__titulo">Habilidades</h2>
-        <ul class="habilidades__lista">
-            <li class="habilidades__elemento">
-                <img class="habilidades__icone" src="assets/html.png" alt="HTML">
-                <p class="habilidades__nome">HTML 5</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icone" src="assets/js_icon.png" alt="JavaScript">
-                <p class="habilidades__nome">JavaScript</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icone" src="assets/php_icon.png" alt="PHP">
-                <p class="habilidades__nome">PHP</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icone" src="assets/nodejs_icon.png" alt="Node.js">
-                <p class="habilidades__nome">Node.js</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icone" src="assets/react_icon.png" alt="React">
-                <p class="habilidades__nome">React</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icone" src="assets/css_icon.png" alt="CSS">
-                <p class="habilidades__nome">CSS</p>
-            </li>
-        </ul>
-    </section>
+        <section class="formacao" id="formacao">
+            <h2 class="formacao__titulo">Formação Acadêmica</h2>
+            <ul class="formacao__lista">
+                <li class="formacao__elemento">
+                    <img class="formacao__icone" src="assets/ufpr_logo.png" alt="Logo da UFPR">
+                    <div>
+                        <h3 class="formacao__nome">Análise de Dados</h3>
+                        <p class="formacao__detalhe">2018 - UFPR</p>
+                    </div>
+                </li>
+                <li class="formacao__elemento">
+                    <img class="formacao__icone" src="assets/alura_logo.png" alt="Logo da Alura">
+                    <div>
+                        <h3 class="formacao__nome">Formação em UX Design</h3>
+                        <p class="formacao__detalhe">2019 - Alura</p>
+                    </div>
+                </li>
+                <li class="formacao__elemento">
+                    <img class="formacao__icone" src="assets/ufrj_logo.png" alt="Logo da UFRJ">
+                    <div>
+                        <h3 class="formacao__nome">Pós-graduação em Design</h3>
+                        <p class="formacao__detalhe">Em andamento - UFRJ</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <!-- Seção de Hobbies -->
-    <section class="hobbies" id="hobbies">
-        <h2 class="hobbies__titulo">Hobbies</h2>
-        <ul class="hobbies__lista">
-            <li class="hobbies__elemento">
-                <img class="hobbies__icone" src="assets/skate_icon.png" alt="Skate">
-                <p class="hobbies__nome">Skate</p>
-            </li>
-            <li class="hobbies__elemento">
-                <img class="hobbies__icone" src="assets/guitar_icon.png" alt="Tocar baixo">
-                <p class="hobbies__nome">Tocar baixo</p>
-            </li>
-            <li class="hobbies__elemento">
-                <img class="hobbies__icone" src="assets/headphones_icon.png" alt="Ouvir música">
-                <p class="hobbies__nome">Ouvir música</p>
-            </li>
-            <li class="hobbies__elemento">
-                <img class="hobbies__icone" src="assets/tv_icon.png" alt="Assistir séries">
-                <p class="hobbies__nome">Assistir séries</p>
-            </li>
-            <li class="hobbies__elemento">
-                <img class="hobbies__icone" src="assets/forkspoon_icon.png" alt="Cozinhar">
-                <p class="hobbies__nome">Cozinhar</p>
-            </li>
-            <li class="hobbies__elemento">
-                <img class="hobbies__icone" src="assets/camera_icon.png" alt="Fotografar">
-                <p class="hobbies__nome">Fotografar</p>
-            </li>
-        </ul>
-    </section>
+        <section class="projetos" id="projetos">
+            <h2 class="projetos__titulo">Experiência Profissional</h2>
+            <div class="projetos__conteiner">
+                <h3 class="projetos__nome">Título da Experiência</h3>
+                <p class="projetos__descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+            </div>
+            <div class="projetos__conteiner">
+                <h3 class="projetos__nome">Título da Experiência</h3>
+                <p class="projetos__descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+            </div>
+        </section>
 
-    <!-- Seção de Formação Acadêmica -->
-    <section class="formacao" id="formacao">
-        <h2 class="formacao__titulo">Formação Acadêmica</h2>
-        <ul class="formacao__lista">
-            <li class="formacao__elemento">
-                <img class="formacao__icone" src="assets/ufpr_logo.png" alt="UFPR">
-                <div>
-                    <h3 class="formacao__nome">Análise de Dados</h3>
-                    <p class="formacao__detalhe">2018 - UFPR</p>
+        <section class="contato" id="contato">
+            <h2 class="contato__titulo">Contato</h2>
+            <p class="contato__descricao">Se você tiver alguma dúvida ou quiser conversar, sinta-se à vontade para me enviar uma mensagem!</p>
+            <form class="contato__formulario" aria-label="Formulário de Contato" action="mailto:anaeggerdemier@outlook.com" method="POST">
+                <div class="contato__campo-container">
+                    <label for="nome" class="contato__label">Nome:</label>
+                    <input id="nome" class="contato__campo" type="text" placeholder="Seu nome" required aria-required="true">
                 </div>
-            </li>
-            <li class="formacao__elemento">
-                <img class="formacao__icone" src="assets/alura_logo.png" alt="Alura">
-                <div>
-                    <h3 class="formacao__nome">Formação em UX Design</h3>
-                    <p class="formacao__detalhe">2019 - Alura</p>
+                
+                <div class="contato__campo-container">
+                    <label for="email" class="contato__label">E-mail:</label>
+                    <input id="email" class="contato__campo" type="email" placeholder="Seu e-mail" required aria-required="true">
                 </div>
-            </li>
-            <li class="formacao__elemento">
-                <img class="formacao__icone" src="assets/ufrj_logo.png" alt="UFRJ">
-                <div>
-                    <h3 class="formacao__nome">Pós-graduação em Design</h3>
-                    <p class="formacao__detalhe">Em andamento - UFRJ</p>
+                
+                <div class="contato__campo-container">
+                    <label for="mensagem" class="contato__label">Mensagem:</label>
+                    <textarea id="mensagem" class="contato__campo contato__campo--textarea" placeholder="Sua mensagem" rows="5" required aria-required="true"></textarea>
                 </div>
-            </li>
-        </ul>
-    </section>
+                
+                <button class="contato__botao" type="submit">Enviar</button>
+            </form>
+        </section>
+        
+    </main>
 
-    <!-- Seção de Projetos -->
-    <section class="projetos" id="projetos">
-        <h2 class="projetos__titulo">Experiência Profissional</h2>
-        <div class="projetos__conteiner">
-            <h3 class="projetos__nome">Título da Experiência</h3>
-            <p class="projetos__descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+    <footer id="footer" class="footer">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6">
+                        <h4>Assine nossa Newsletter</h4>
+                        <p>Receba as últimas novidades e atualizações sobre meu trabalho!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form">
+                                <input type="email" name="email" placeholder="Seu Email" required>
+                                <input type="submit" value="Assinar">
+                            </div>
+                            <div class="loading">Carregando...</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Sua inscrição foi enviada. Obrigado!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="projetos__conteiner">
-            <h3 class="projetos__nome">Título da Experiência</h3>
-            <p class="projetos__descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+    
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <span class="sitename">Ana Caroline Demier</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>Desenvolvedora de Software</p>
+                        <p>Rio de Janeiro, RJ 01000-000</p>
+                        <p class="mt-3"><strong>Telefone:</strong> <span>+55 11 98765-4321</span></p>
+                        <p><strong>Email:</strong> <span>anaeggerdemier@outlook.com</span></p>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#sobre-mim">Sobre mim</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#habilidades">Habilidades</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#hobbies">Hobbies</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#formacao">Formação</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-4 col-md-12">
+                    <h4>Siga-me</h4>
+                    <p>Fique atualizado com as novidades e atualizações.</p>
+                    <div class="social-links d-flex">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" title="Siga-me no GitHub" aria-label="Siga-me no GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" title="Siga-me no LinkedIn" aria-label="Siga-me no LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" title="Siga-me no Instagram" aria-label="Siga-me no Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
         </div>
-    </section>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ana Caroline Demier. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
 
-    <!-- Seção de Contato -->
-    <section class="contato" id="contato">
-        <h2 class="contato__titulo">Contato</h2>
-        <form class="contato__formulario">
-            <input class="contato__campo" type="text" placeholder="Nome">
-            <input class="contato__campo" type="email" placeholder="E-mail">
-            <textarea class="contato__campo contato__campo--textarea" placeholder="Mensagem"></textarea>
-            <button class="contato__botao" type="submit">Enviar</button>
-        </form>
-    </section>
-</body>
-
-    <!-- Link para o script -->
     <script src="scripts/script.js"></script>
+</body>
 </html>
