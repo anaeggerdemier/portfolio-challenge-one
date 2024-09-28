@@ -22,7 +22,8 @@ body {
     line-height: 1.7;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -64,8 +65,8 @@ a:hover {
 }
 
 .navegacao__lista {
-    display: flex; 
-    gap: 1.5rem; 
+    display: flex;
+    gap: 1.5rem;
 }
 
 .navegacao__elemento a {
@@ -74,9 +75,8 @@ a:hover {
     color: var(--cor-secundaria);
 }
 
-/* Ajustes nos campos do menu em dispositivos móveis */
 .menu-toggle {
-    display: block; 
+    display: block;
     margin-top: 1rem;
     cursor: pointer;
     z-index: 1000;
@@ -88,87 +88,27 @@ a:hover {
 }
 
 .navegacao__lista {
-    display: none; 
-    flex-direction: column; 
+    display: none;
+    flex-direction: column;
 }
 
 .navegacao__lista.ativo {
-    display: flex; 
+    display: flex;
 }
 
-/* Estilos das seções */
-.apresentacao, .sobre-mim, .habilidades, .hobbies, .projetos, .contato, .formacao {
+.apresentacao {
     max-width: 800px;
     margin: 5rem auto;
     text-align: center;
     padding: 2rem;
-    background-color: #fff; /* Alterando o fundo da seção para branco */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.titulo {
-    font-size: 2.2rem; /* Tamanho do título aumentado */
-    font-weight: 600;
-    color: var(--cor-do-texto);
-    margin-bottom: 1.5rem; /* Ajustando margens */
-}
-
-.subtitulo {
-    font-size: 1.2rem;
-    color: var(--cor-secundaria);
-    margin-bottom: 1rem; /* Adicionando margem inferior */
-}
-
-.texto {
-    font-size: 1.1rem;
-    color: var(--cor-secundaria);
-    line-height: 1.8;
-    margin-bottom: 2rem; /* Aumentando a margem inferior */
-}
-
-/* Estilos Responsivos */
-@media (min-width: 768px) {
-    .navegacao__lista {
-        display: flex; 
-        flex-direction: row; 
-    }
-
-    .menu-toggle {
-        display: none; 
-    }
-}
-
-@media (max-width: 767px) {
-    .navegacao__lista {
-        display: none;  
-        flex-direction: column;  
-        width: 100%;  
-        position: absolute; 
-        top: 100%;  
-        left: 0;  
-        background-color: var(--cor-de-fundo-menu);
-        z-index: 999;  
-        max-height: 0; 
-        overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease; 
-    }
-
-    .navegacao__lista.ativo {
-        display: flex; 
-        max-height: 300px;
-        opacity: 1;
-    }
-
-    .menu-toggle:focus + .navegacao__lista,
-    .menu-toggle:focus-within .navegacao__lista {
-        display: flex; 
-        max-height: 300px; 
-        opacity: 1; 
-    }
-}
-
-/* Estilos de seções e elementos específicos */
 .apresentacao__foto {
     width: 150px;
     height: 150px;
@@ -189,18 +129,39 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-/* Efeitos em Habilidades e Hobbies */
-.habilidades__lista, .hobbies__lista {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 2rem;
-    justify-items: center;
+.apresentacao, .sobre-mim, .habilidades, .hobbies, .projetos, .contato, .formacao {
+    max-width: 800px;
+    margin: 5rem auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Melhorias em Projetos */
+.titulo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--cor-do-texto);
+    margin-bottom: 1.5rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+}
+
+.texto {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
 .projetos__titulo {
     text-align: center;
-    font-size: 2rem; /* Aumentando o tamanho do título */
+    font-size: 2rem;
     font-weight: 600;
     color: var(--cor-do-texto);
     margin-bottom: 2rem;
@@ -214,7 +175,6 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-/* Estilos de Contato */
 .contato {
     background-color: #ffffff;
     padding: 2rem;
@@ -272,10 +232,9 @@ a:hover {
 
 .contato__botao:hover {
     background-color: #45a049;
-    transform: translateY(-2px); /* Efeito de levitar no hover */
+    transform: translateY(-2px);
 }
 
-/* Estilos de Formação */
 .formacao__lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -293,4 +252,68 @@ a:hover {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-do-texto);
+}
+
+.habilidades__lista,
+.hobbies__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.redes {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 0;
+}
+
+.redes__elemento {
+    list-style: none;
+}
+
+/* -------------------------------------- Media Queries -------------------------------------- */
+@media (min-width: 768px) {
+    .navegacao__lista {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .navegacao__lista {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--cor-de-fundo-menu);
+        z-index: 999;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navegacao__lista.ativo {
+        display: flex;
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .menu-toggle:focus + .navegacao__lista,
+    .menu-toggle:focus-within .navegacao__lista {
+        display: flex;
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
