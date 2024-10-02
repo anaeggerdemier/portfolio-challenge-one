@@ -7,9 +7,22 @@
     --light-gray: #f9f9f9;
     --dark-gray: #666; 
     --highlight-color: #e1e1e1;
+
     --border-radius: 0.5rem; 
     --max-width: 75rem; 
     --transition-speed: 0.3s; 
+
+    --font-size-small: 0.875rem; 
+    --font-size-medium: 1rem; 
+    --font-size-large: 1.25rem; 
+    --font-size-xlarge: 1.5rem; 
+
+    --margin-small: 0.5rem;
+    --margin-medium: 1rem;
+    --margin-large: 1.5rem;
+    --padding-small: 0.5rem;
+    --padding-medium: 1rem;
+    --padding-large: 1.5rem;
 }
 
 body {
@@ -21,12 +34,14 @@ body {
     color: var(--text-color);
 }
 
+/* Cabeçalho */
 .cabecalho {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 1.5rem;
-    text-align: center;
-    position: relative;
+    padding: var(--padding-large);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .cabecalho__logo {
@@ -34,16 +49,38 @@ body {
 }
 
 .cabecalho__titulo {
-    font-size: 2.5rem;
-    margin: 0.5rem 0; 
+    font-size: var(--font-size-xlarge);
+    margin: var(--margin-small) 0; 
 }
 
 .menu-toggle {
     display: none; 
+    background-color: var(--primary-color); 
+    color: var(--white); 
+    border: none; 
+    padding: var(--padding-small) var(--padding-medium);
+    border-radius: var(--border-radius); 
+    font-size: var(--font-size-medium); 
+    cursor: pointer; 
+    transition: background-color var(--transition-speed), transform var(--transition-speed); 
+}
+
+.menu-toggle:hover {
+    background-color: var(--secondary-color); 
+    transform: translateY(-2px); 
+}
+
+.menu-toggle:focus {
+    outline: 2px solid var(--secondary-color); 
+    outline-offset: 2px; 
+}
+
+.menu-toggle:active {
+    transform: translateY(1px); 
 }
 
 .navegacao {
-    margin-top: 1rem; 
+    margin-top: var(--margin-medium); 
 }
 
 .navegacao__lista {
@@ -54,8 +91,13 @@ body {
     margin: 0;
 }
 
+.navegacao.show {
+    max-height: 300px; 
+    opacity: 1; 
+}
+
 .navegacao__elemento {
-    margin: 0 1rem;
+    margin: var(--margin-medium);
 }
 
 .navegacao__elemento a {
@@ -67,52 +109,67 @@ body {
 
 .navegacao__elemento a:hover {
     text-decoration: underline; 
-    color: #e1e1e1; 
+    color: var(--highlight-color); 
 }
 
+/* Apresentação */
 .apresentacao {
-    display: flex;
-    align-items: center;
-    padding: 3rem 1rem; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: var(--padding-large) var(--padding-medium);
     background-color: var(--white);
-    flex-direction: column; 
 }
 
 .apresentacao__foto {
-    width: 9.375rem;
-    border-radius: 50%;
-    margin-bottom: 1.25rem;
+    width: 100%;  
+    height: auto; 
+    max-width: 368px; 
+    border-radius: 50%; 
+    margin: var(--margin-medium) 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid var(--primary-color); 
+    object-fit: cover; 
 }
 
 .apresentacao__conteiner {
     max-width: var(--max-width);
-    text-align: center; 
+    text-align: left; 
+    margin-left: var(--margin-medium);
 }
 
 .apresentacao__titulo {
-    font-size: 1.5rem;
-    margin-bottom: 0.625rem; 
+    font-size: var(--font-size-large); 
+    margin-bottom: var(--margin-medium); 
+    display: flex; 
+    align-items: center; 
 }
 
+/* Redes Sociais */
 .redes {
+    display: flex; 
+    justify-content: flex-start; 
+    gap: var(--margin-medium); 
     list-style: none;
     padding: 0;
+    margin-top: var(--margin-large);
 }
 
 .redes__elemento {
-    margin: 0.3125rem 0; 
+    margin: var(--margin-small) 0; 
 }
 
+/* Seções */
 section {
-    padding: 3rem 1rem; 
+    padding: var(--padding-large) var(--padding-medium); 
     background-color: var(--light-gray);
-    margin: 0; 
     border-radius: var(--border-radius);
 }
 
 section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.25rem; 
+    font-size: var(--font-size-large);
+    margin-bottom: var(--margin-medium); 
     text-align: center; 
 }
 
@@ -121,7 +178,7 @@ section h2 {
 .formacao__lista {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(9.375rem, 1fr)); 
-    gap: 1.5rem; 
+    gap: var(--margin-large); 
 }
 
 .habilidades__elemento,
@@ -136,23 +193,24 @@ section h2 {
     width: 3.125rem;
 }
 
+/* Contato */
 .contato {
     background-color: var(--background-color);
-    padding: 2rem 1rem; 
+    padding: var(--padding-large) var(--padding-medium); 
     text-align: center; 
 }
 
 .contato__titulo {
-    font-size: 2rem; 
+    font-size: var(--font-size-large); 
     font-weight: bold; 
     color: var(--primary-color); 
-    margin-bottom: 1rem; 
+    margin-bottom: var(--margin-medium); 
 }
 
 .contato__descricao {
-    font-size: 1.125rem; 
-    color: #666; 
-    margin-bottom: 2rem;
+    font-size: var(--font-size-medium); 
+    color: var(--dark-gray); 
+    margin-bottom: var(--margin-large);
 }
 
 .contato__formulario {
@@ -161,7 +219,7 @@ section h2 {
     align-items: center;
     max-width: 600px; 
     margin: 0 auto; 
-    padding: 1.5rem; 
+    padding: var(--padding-medium); 
     background-color: var(--white); 
     border-radius: var(--border-radius); 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
@@ -169,16 +227,16 @@ section h2 {
 
 .contato__campo-container {
     width: 100%; 
-    margin-bottom: 1.5rem; 
+    margin-bottom: var(--margin-medium); 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
 }
 
 .contato__label {
-    margin-bottom: 0.5rem; 
+    margin-bottom: var(--margin-small); 
     font-weight: bold;
-    font-size: 1rem; 
+    font-size: var(--font-size-medium); 
     color: var(--text-color); 
     text-align: left;
 }
@@ -186,10 +244,10 @@ section h2 {
 .contato__campo {
     width: 100%; 
     max-width: 400px; 
-    padding: 0.75rem;
+    padding: var(--padding-small);
     border: 1px solid #ccc; 
     border-radius: var(--border-radius); 
-    font-size: 1rem; 
+    font-size: var(--font-size-medium); 
     transition: border-color var(--transition-speed); 
 }
 
@@ -199,14 +257,14 @@ section h2 {
 }
 
 .contato__botao {
-    padding: 0.75rem; 
+    padding: var(--padding-small); 
     background-color: var(--primary-color); 
     color: var(--white); 
     border: none; 
     border-radius: var(--border-radius);
     cursor: pointer; 
     transition: background-color var(--transition-speed), transform var(--transition-speed); 
-    font-size: 1rem; 
+    font-size: var(--font-size-medium); 
 }
 
 .contato__botao:hover {
@@ -219,59 +277,80 @@ section h2 {
     transform: translateY(1px); 
 }
 
+.contato__botao:focus {
+    outline: 2px solid var(--secondary-color); 
+    outline-offset: 2px; 
+}
+
+/* Rodapé */
 .footer {
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
-    padding: 2rem 0; 
+    padding: var(--padding-large) 0; 
     display: flex; 
     flex-direction: column; 
 }
 
 .footer-top {
-    margin-bottom: 1.25rem; 
+    margin-bottom: var(--margin-medium); 
 }
 
 .footer-links {
     display: flex; 
     justify-content: center; 
-    gap: 2rem; 
-    margin-bottom: 1rem; 
+    gap: var(--margin-large); 
+    margin-bottom: var(--margin-medium); 
 }
 
 .footer-link {
     color: var(--white);
-    text-decoration: none;
-    font-weight: 500; 
-    transition: color var(--transition-speed);
+    text-decoration: none; 
+    transition: color var(--transition-speed); 
 }
 
 .footer-link:hover {
-    color: #e1e1e1;
+    color: var(--highlight-color); 
 }
 
-.footer-bottom {
-    font-size: 0.875rem; 
-    color: #d9d9d9; 
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
-    .navegacao__lista {
+    .cabecalho {
         flex-direction: column; 
-        align-items: center;
+        align-items: flex-start; 
     }
 
     .menu-toggle {
         display: block; 
-        background-color: var(--primary-color); 
-        color: var(--white); 
-        border: none;
-        padding: 0.5rem 1rem; 
-        margin: 0 auto; 
-        cursor: pointer; 
+        margin-top: var(--margin-medium); 
+    }
+
+    .navegacao {
+        display: none; 
+        flex-direction: column; 
+        align-items: center; 
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height var(--transition-speed), opacity var(--transition-speed);
+    }
+
+    .navegacao.show {
+        display: flex; 
+        opacity: 1; 
+        max-height: 300px; 
+    }
+
+    .apresentacao {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .apresentacao__foto {
+        margin: var(--margin-large) 0; 
     }
 
     .contato__formulario {
-        padding: 1rem; 
+        max-width: 100%; 
     }
 }
