@@ -15,196 +15,218 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-...your-integrity-hash..." crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/css/style.css">
     <title>Meu Portfólio</title>
 </head>
 
 <body>
-    <header class="cabecalho">
-        <h1 class="cabecalho__titulo">Ana Caroline Demier</h1>
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <header class="header">
+        <h1 class="header__title">Ana Caroline Demier</h1>
+        <button class="menu-toggle" aria-label="Alternar menu">
             <i class="fas fa-bars"></i>
         </button>
-        <nav class="navegacao" aria-label="Navegação principal">
-            <ul class="navegacao__lista list-unstyled d-flex justify-content-center">
-                <li class="navegacao__elemento mx-3"><a href="#sobre-mim" class="text-white">Sobre mim</a></li>
-                <li class="navegacao__elemento mx-3"><a href="#habilidades" class="text-white">Habilidades</a></li>
-                <li class="navegacao__elemento mx-3"><a href="#hobbies" class="text-white">Hobbies</a></li>
-                <li class="navegacao__elemento mx-3"><a href="#formacao" class="text-white">Formação</a></li>
-                <li class="navegacao__elemento mx-3"><a href="#projetos" class="text-white">Projetos</a></li>
-                <li class="navegacao__elemento mx-3"><a href="#contato" class="text-white">Contato</a></li>
+        <nav class="navigation" aria-label="Navegação principal">
+            <ul class="navigation__list">
+                <li class="navigation__list__item"><a href="#about" class="text-white" aria-label="Sobre mim">Sobre mim</a></li>
+                <li class="navigation__list__item"><a href="#skills" class="text-white" aria-label="Habilidades">Habilidades</a></li>
+                <li class="navigation__list__item"><a href="#hobbies" class="text-white" aria-label="Hobbies">Hobbies</a></li>
+                <li class="navigation__list__item"><a href="#education" class="text-white" aria-label="Formação">Formação</a></li>
+                <li class="navigation__list__item"><a href="#projects" class="text-white" aria-label="Projetos">Projetos</a></li>
+                <li class="navigation__list__item"><a href="#contact" class="text-white" aria-label="Contato">Contato</a></li>
             </ul>
         </nav>
-    </header>
+    </header>    
 
     <main>
-        <section class="apresentacao">
-            <div class="apresentacao__conteiner"> 
-                <h2 class="apresentacao__titulo">Howdy! I'm Ana and I am a software developer</h2>
-                <p class="apresentacao__subtitulo">I'm an IT Systems Analysis and Development student, and I am currently participating in the Oracle ONE project at Alura Latam.</p>
-                <ul class="redes">
-                    <li class="redes__elemento mb-2"><a href="https://github.com" target="_blank" rel="noopener" aria-label="Github">Github <img src="assets/arrow.png" alt="Seta"></a></li>
-                    <li class="redes__elemento mb-2"><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Linkedin">Linkedin <img src="assets/arrow.png" alt="Seta"></a></li>
-                    <li class="redes__elemento mb-2"><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram <img src="assets/arrow.png" alt="Seta"></a></li>
-                    <li class="redes__elemento mb-2"><a href="link-para-curriculo.pdf" target="_blank" rel="noopener" aria-label="Currículo">Currículo <img src="assets/arrow.png" alt="Seta"></a></li>
+        <section class="hero">
+            <div class="hero__content">
+                <h2 class="hero__title">Howdy! I'm Ana and I am a software developer</h2>
+                <p class="hero__subtitle">I'm an IT Systems Analysis and Development student, and I am currently participating in the Oracle ONE project at Alura Latam.</p>
+                
+                <!-- Links para as redes sociais -->
+                <ul class="social-links">
+                    <li class="social-links__item mb-3">
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="Github">
+                            Github <img src="assets/arrow.png" alt="Seta apontando para a direita">
+                        </a>
+                    </li>
+                    <li class="social-links__item mb-3">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Linkedin">
+                            Linkedin <img src="assets/arrow.png" alt="Seta apontando para a direita">
+                        </a>
+                    </li>
+                    <li class="social-links__item mb-3">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                            Instagram <img src="assets/arrow.png" alt="Seta apontando para a direita">
+                        </a>
+                    </li>
+                    <li class="social-links__item mb-3">
+                        <a href="link-para-curriculo.pdf" target="_blank" rel="noopener" aria-label="Currículo">
+                            Currículo <img src="assets/arrow.png" alt="Seta apontando para a direita">
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <img class="apresentacao__foto" src="assets/profile.jpg" alt="Foto de perfil de Ana Caroline Demier">
-        </section>
+            
+            <img class="hero__image" src="assets/profile.jpg" alt="Foto de Ana Caroline Demier" loading="lazy">
+        </section>        
 
-        <section class="sobre-mim py-5" id="sobre-mim">
-            <h2 class="sobre-mim__titulo text-center">Sobre mim</h2>
-            <p class="sobre-mim__texto text-center">I am a <strong>Software Developer</strong> focused on fostering collaboration and creating inclusive solutions, with a strong emphasis on <strong>User Experience (UX)</strong></p>
-            <p class="sobre-mim__texto">I am passionate about leveraging software development to drive social impact, crafting innovative and equitable solutions that address real-world challenges.
-                <strong>At BRAVAS In Tech</strong>, I lead initiatives that advocate for women’s inclusion in technology, managing projects, moderating communities, curating content, and fostering interactions to strengthen the tech ecosystem.
-            </p>
-            <img class="sobre-mim__assinatura" src="assets/signature.png" alt="Assinatura de Ana Caroline Demier">
-        </section>
-
-        <section class="habilidades py-5" id="habilidades">
-            <h2 class="habilidades__titulo text-center">Habilidades</h2>
-            <ul class="habilidades__lista list-unstyled d-grid grid-template-columns-1 grid-template-columns-md-2 grid-template-columns-lg-3 gap-3">
-                <li class="habilidades__elemento text-center">
-                    <img class="habilidades__icone" src="assets/html.png" alt="HTML 5">
-                    <p class="habilidades__nome">HTML 5</p>
-                </li>
-                <li class="habilidades__elemento text-center">
-                    <img class="habilidades__icone" src="assets/js_icon.png" alt="JavaScript">
-                    <p class="habilidades__nome">JavaScript</p>
-                </li>
-                <li class="habilidades__elemento text-center">
-                    <img class="habilidades__icone" src="assets/php_icon.png" alt="PHP">
-                    <p class="habilidades__nome">PHP</p>
-                </li>
-                <li class="habilidades__elemento text-center">
-                    <img class="habilidades__icone" src="assets/nodejs_icon.png" alt="Node.js">
-                    <p class="habilidades__nome">Node.js</p>
-                </li>
-                <li class="habilidades__elemento text-center">
-                    <img class="habilidades__icone" src="assets/react_icon.png" alt="React">
-                    <p class="habilidades__nome">React</p>
-                </li>
-                <li class="habilidades__elemento text-center">
-                    <img class="habilidades__icone" src="assets/css_icon.png" alt="CSS">
-                    <p class="habilidades__nome">CSS</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="hobbies py-5" id="hobbies">
-            <h2 class="hobbies__titulo text-center">Hobbies</h2>
-            <ul class="hobbies__lista list-unstyled d-grid grid-template-columns-1 grid-template-columns-md-2 grid-template-columns-lg-3 gap-3">
-                <li class="hobbies__elemento text-center">
-                    <img class="hobbies__icone" src="assets/skate_icon.png" alt="Skate">
-                    <p class="hobbies__nome">Skate</p>
-                </li>
-                <li class="hobbies__elemento text-center">
-                    <img class="hobbies__icone" src="assets/guitar_icon.png" alt="Tocar baixo">
-                    <p class="hobbies__nome">Tocar baixo</p>
-                </li>
-                <li class="hobbies__elemento text-center">
-                    <img class="hobbies__icone" src="assets/headphones_icon.png" alt="Ouvir música">
-                    <p class="hobbies__nome">Ouvir música</p>
-                </li>
-                <li class="hobbies__elemento text-center">
-                    <img class="hobbies__icone" src="assets/tv_icon.png" alt="Assistir séries">
-                    <p class="hobbies__nome">Assistir séries</p>
-                </li>
-                <li class="hobbies__elemento text-center">
-                    <img class="hobbies__icone" src="assets/forkspoon_icon.png" alt="Cozinhar">
-                    <p class="hobbies__nome">Cozinhar</p>
-                </li>
-                <li class="hobbies__elemento text-center">
-                    <img class="hobbies__icone" src="assets/travel_icon.png" alt="Viajar">
-                    <p class="hobbies__nome">Viajar</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="formacao py-5" id="formacao">
-            <h2 class="formacao__titulo text-center">Formação</h2>
-            <ul class="formacao__lista list-unstyled">
-                <li class="formacao__elemento">
-                    <h3 class="formacao__instituicao">ANALISTA DE SISTEMAS DE DESENVOLVIMENTO</h3>
-                    <p class="formacao__data">2022 - Presente</p>
-                    <p class="formacao__local">UNIVERSIDADE DA REGIÃO DE JOINVILLE</p>
-                </li>
-                <li class="formacao__elemento">
-                    <h3 class="formacao__instituicao">FUNDAMENTAÇÃO DE SOFTWARE</h3>
-                    <p class="formacao__data">2021 - 2021</p>
-                    <p class="formacao__local">SESI SC</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="projetos py-5" id="projetos">
-            <h2 class="projetos__titulo text-center">Projetos</h2>
-            <div class="projetos__lista row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="projetos__elemento card">
-                        <img src="assets/projeto1.png" alt="Projeto 1" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Título do Projeto 1</h5>
-                            <p class="card-text">Descrição breve do projeto 1.</p>
-                            <a href="#" class="btn btn-primary">Ver projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="projetos__elemento card">
-                        <img src="assets/projeto2.png" alt="Projeto 2" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Título do Projeto 2</h5>
-                            <p class="card-text">Descrição breve do projeto 2.</p>
-                            <a href="#" class="btn btn-primary">Ver projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="projetos__elemento card">
-                        <img src="assets/projeto3.png" alt="Projeto 3" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Título do Projeto 3</h5>
-                            <p class="card-text">Descrição breve do projeto 3.</p>
-                            <a href="#" class="btn btn-primary">Ver projeto</a>
-                        </div>
-                    </div>
+        <section class="about py-5" id="about">
+            <div class="container">
+                <h2 class="about__title">Sobre mim</h2>
+                <p class="about__text">
+                    I am a <strong>Software Developer</strong> focused on fostering collaboration and creating inclusive solutions, 
+                    with a strong emphasis on <strong>User Experience (UX)</strong>.
+                </p>
+                <p class="about__text">
+                    I am passionate about leveraging software development to drive social impact, crafting innovative and equitable solutions that address real-world challenges.
+                    <strong>At BRAVAS In Tech</strong>, I lead initiatives that advocate for women’s inclusion in technology, managing projects, moderating communities, curating content, 
+                    and fostering interactions to strengthen the tech ecosystem.
+                </p>
+                <div>
+                    <img class="about__signature" src="assets/signature.png" alt="Assinatura de Ana Caroline Demier" loading="lazy">
                 </div>
             </div>
-        </section>
+        </section>        
 
-        <section class="contato" id="contato">
-            <h2 class="contato__titulo">Contato</h2>
-            <p class="contato__descricao">Se você tiver alguma dúvida ou quiser conversar, sinta-se à vontade para me enviar uma mensagem!</p>
-            <form class="contato__formulario" aria-label="Formulário de Contato" action="mailto:anaeggerdemier@outlook.com" method="POST">
-                <div class="contato__campo-container">
-                    <label for="nome" class="contato__label">Nome:</label>
-                    <input id="nome" class="contato__campo" type="text" placeholder="Seu nome" required aria-required="true">
-                </div>
-                
-                <div class="contato__campo-container">
-                    <label for="email" class="contato__label">E-mail:</label>
-                    <input id="email" class="contato__campo" type="email" placeholder="Seu e-mail" required aria-required="true">
-                </div>
-                
-                <div class="contato__campo-container">
-                    <label for="mensagem" class="contato__label">Mensagem:</label>
-                    <textarea id="mensagem" class="contato__campo contato__campo--textarea" placeholder="Sua mensagem" rows="5" required aria-required="true"></textarea>
-                </div>
-                
-                <button class="contato__botao" type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+<section class="skills py-5" id="skills">
+    <h2 class="skills__title text-center">Skills</h2>
+    <ul class="skills__list list-unstyled d-grid gap-3">
+        <li class="skills__item text-center">
+            <div class="skills__container">
+                <img class="skills__icon" src="assets/htlm.png" alt="HTML 5 icon" loading="lazy">
+                <p class="skills__name">HTML 5</p>
+            </div>
+        </li>
+        <li class="skills__item text-center">
+            <div class="skills__container">
+                <img class="skills__icon" src="assets/js_icon.png" alt="JavaScript icon" loading="lazy">
+                <p class="skills__name">JavaScript</p>
+            </div>
+        </li>
+        <li class="skills__item text-center">
+            <div class="skills__container">
+                <img class="skills__icon" src="assets/php_icon.png" alt="PHP icon" loading="lazy">
+                <p class="skills__name">PHP</p>
+            </div>
+        </li>
+        <li class="skills__item text-center">
+            <div class="skills__container">
+                <img class="skills__icon" src="assets/nodejs_icon.png" alt="Node.js icon" loading="lazy">
+                <p class="skills__name">Node.js</p>
+            </div>
+        </li>
+        <li class="skills__item text-center">
+            <div class="skills__container">
+                <img class="skills__icon" src="assets/react_icon.png" alt="React icon" loading="lazy">
+                <p class="skills__name">React</p>
+            </div>
+        </li>
+        <li class="skills__item text-center">
+            <div class="skills__container">
+                <img class="skills__icon" src="assets/css_icon.png" alt="CSS icon" loading="lazy">
+                <p class="skills__name">CSS</p>
+            </div>
+        </li>
+    </ul>
+</section>
 
-    <footer class="footer text-center py-4">
-        <p>© 2024 Ana Caroline Demier. Todos os direitos reservados.</p>
-    </footer>
+<section class="hobbies py-5" id="hobbies">
+    <h2 class="hobbies__title text-center">Hobbies</h2>
+    <ul class="hobbies__list list-unstyled d-grid gap-3">
+        <li class="hobbies__item text-center">
+            <div class="hobbies__container">
+                <img class="hobbies__icon" src="assets/skate_icon.png" alt="Skate icon" loading="lazy">
+                <p class="hobbies__name">Skate</p>
+            </div>
+        </li>
+        <li class="hobbies__item text-center">
+            <div class="hobbies__container">
+                <img class="hobbies__icon" src="assets/guitar_icon.png" alt="Guitar icon" loading="lazy">
+                <p class="hobbies__name">Play Bass</p>
+            </div>
+        </li>
+        <li class="hobbies__item text-center">
+            <div class="hobbies__container">
+                <img class="hobbies__icon" src="assets/headphones_icon.png" alt="Headphones icon" loading="lazy">
+                <p class="hobbies__name">Listen to Music</p>
+            </div>
+        </li>
+        <li class="hobbies__item text-center">
+            <div class="hobbies__container">
+                <img class="hobbies__icon" src="assets/tv_icon.png" alt="TV icon" loading="lazy">
+                <p class="hobbies__name">Watch Series</p>
+            </div>
+        </li>
+        <li class="hobbies__item text-center">
+            <div class="hobbies__container">
+                <img class="hobbies__icon" src="assets/forkspoon_icon.png" alt="Cutlery icon" loading="lazy">
+                <p class="hobbies__name">Cooking</p>
+            </div>
+        </li>
+        <li class="hobbies__item text-center">
+            <div class="hobbies__container">
+                <img class="hobbies__icon" src="assets/tv_icon.png" alt="Travel icon" loading="lazy">
+                <p class="hobbies__name">Travel</p>
+            </div>
+        </li>
+    </ul>
+</section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha384-...your-integrity-hash..." crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/script.js"></script>
-</body>
-</html>
+<section class="education py-5" id="education">
+    <h2 class="education__title text-center">Education</h2>
+    <ul class="education__list list-unstyled">
+        <li class="education__item">2024 - 2026: <strong>Systems Analysis and Development</strong>, Descomplica Digital College</li>
+        <li class="education__item">2024: <strong>Full-Stack Web Development</strong>, Alura</li>
+        <li class="education__item">2024: <strong>UX Design</strong>, Alura</li>
+    </ul>
+</section>
+
+<section class="projects py-5" id="projects">
+    <h2 class="projects__title text-center">Projects</h2>
+    <div class="projects__container">
+        <div class="projects__item">
+            <h3 class="projects__name">Project 1</h3>
+            <p class="projects__description">A brief description of project 1.</p>
+        </div>
+        <div class="projects__item">
+            <h3 class="projects__name">Project 2</h3>
+            <p class="projects__description">A brief description of project 2.</p>
+        </div>
+        <div class="projects__item">
+            <h3 class="projects__name">Project 3</h3>
+            <p class="projects__description">A brief description of project 3.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact py-5" id="contact">
+    <h2 class="contact__title">Contact</h2>
+    <p class="contact__description">Want to get in touch with me? Fill out the form on the side, and I will contact you as soon as possible.</p>
+    <form class="contact__form" action="#" method="post">
+        <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required aria-required="true">
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required aria-required="true">
+        </div>
+        <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-control" required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="btn" aria-label="Send message">Send</button>
+    </form>
+</section>
+</main>
+
+<footer class="footer">
+    <p class="footer__text">&copy; 2024 Ana Caroline Demier. All rights reserved.</p>
+    <div class="footer__social">
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">GitHub</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
