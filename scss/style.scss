@@ -1,22 +1,27 @@
-$primary-color: #ebded4;
-$secondary-color: #f6f4ea;
-$background-color: #fffdf7;
-$contrast-color: #bc2649;
-$text-color: #333;
-$link-hover-color: darken($contrast-color, 10%);
-$border-color: #c8c8c8;
-$focus-color: #a2a2a2;
-$btn-hover-color: darken($contrast-color, 5%);
-$font-family: 'Roboto', sans-serif;
-$font-heading-family: 'Raleway', sans-serif;
-$font-size-base: 1rem;
+$primary-color: #ebded4; 
+$secondary-color: #f6f4ea; 
+$background-color: #fffdf7; 
+$contrast-color: #c63c54; 
+$text-color: #333; 
+$link-hover-color: darken($contrast-color, 15%); 
+$border-color: #c8c8c8; 
+$focus-color: #5e5e5e; 
+$btn-hover-color: darken($contrast-color, 10%); 
+$font-family: 'Roboto', sans-serif; 
+$font-heading-family: 'Raleway', sans-serif; 
+$font-size-base: 1rem; 
 $container-width: 75rem;
 
 // --------------------------------- General Styling & Shared Classes ---------------------------------
 
-html, body {
-  overflow-y: auto;
-  overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  text-align: center;
 }
 
 body {
@@ -26,6 +31,15 @@ body {
   background-color: $background-color;
   margin: 0;
   padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -115,7 +129,7 @@ body {
   color: $text-color;
   padding: 5rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 
@@ -140,21 +154,27 @@ body {
 
     .hero__title {
       font-size: 3rem;
+      text-align: left;
     }
 
     &__subtitle {
+      font-family: $font-heading-family;
       font-size: 1.25rem;
       margin-bottom: 0;
     }
   }
 
   &__image {
-    width: 23rem;
-    height: 23rem;
+    display: block;
+    max-width: 100%; 
+    width: 23rem; 
+    height: 23rem; 
+    object-fit: cover; 
+    object-position: center 5%;
     border-radius: 50%;
     flex-shrink: 0;
-    margin: 0 2rem;
-  }
+    margin: 0 2rem 0 0;
+  }  
 }
 
 .social-links {
@@ -192,9 +212,11 @@ body {
   &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: left;
   }
 
   &__text {
+    font-family: $font-heading-family;
     margin-bottom: 1rem;
   }
 
@@ -242,6 +264,7 @@ body {
     }
 
     &__name {
+      font-family: $font-heading-family;
       margin-top: 0.5rem;
       font-size: 0.9rem;
     }
@@ -319,7 +342,7 @@ body {
   text-align: center; 
 
   &__title {
-    font-family: 'Raleway';
+    font-family: $font-family;
     font-weight: 700;
     font-size: 2rem;  
     margin-bottom: 2rem; 
@@ -348,7 +371,7 @@ body {
     }
 
     &__name {
-      font-family: 'Raleway';
+      font-family: $font-family;
       font-size: 1.75rem; 
       font-weight: 600;
       margin-bottom: 1rem; 
@@ -356,7 +379,7 @@ body {
     }
 
     &__description {
-      font-family: 'Raleway';
+      font-family: $font-heading-family;
       font-size: 1rem; 
       color: $text-color; 
       line-height: 1.5; 
@@ -377,7 +400,7 @@ body {
     height: auto;
 
     &__title {
-        font-family: 'Raleway';
+        font-family: $font-family;
         font-weight: 700;
         font-size: 2rem;
         line-height: 38px;
@@ -385,7 +408,7 @@ body {
     }
 
     &__description {
-        font-family: 'Raleway';
+        font-family: $font-heading-family;
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
@@ -408,7 +431,7 @@ body {
             gap: 0.5rem;
 
             .form-label {
-                font-family: 'Raleway';
+                font-family: $font-family;
                 font-weight: 400;
                 font-size: 0.75rem;
                 color: #A2A2A2;
@@ -442,7 +465,7 @@ body {
             height: 3.1875rem;
             background: $secondary-color;
             color: $text-color;
-            font-family: 'Raleway';
+            font-family: $font-family;
             font-weight: 400;
             font-size: 1rem;
             border: none;
