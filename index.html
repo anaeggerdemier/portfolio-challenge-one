@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Ana Caroline Demier, desenvolvedora de software focada em soluções inclusivas.">
+    <meta name="author" content="Ana Caroline Demier">
+    <meta name="keywords" content="Desenvolvedora de Software, UX, Inclusão, Tecnologia">
 
     <link href="assets/img/favicon.ico" rel="icon" sizes="any">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/3/1xjJ3meLgR7eOq9L3y5ZR04SoSxNOeC12mg8" crossorigin="anonymous">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +21,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-...your-integrity-hash..." crossorigin="anonymous">
     <link rel="stylesheet" href="styles/css/style.css">
-    <title>Portfolio of Ana</title>
+    <title>Portfolio of Ana Caroline Demier - Software Developer</title>
 </head>
 
 <body>
@@ -68,7 +73,7 @@
                 </ul>
             </div>
             
-            <img class="hero__image" src="assets/profile.jpg" alt="Photo of Ana Caroline Demier" loading="lazy">
+            <img class="hero__image" src="assets/profile.jpg" alt="Photo of Ana Caroline Demier smiling" loading="lazy">
         </section>        
 
         <section class="about py-5" id="about">
@@ -184,21 +189,28 @@
 
 <section class="projects py-5" id="projects">
     <h2 class="projects__title text-center">Projects</h2>
-    <div class="projects__container">
-        <div class="projects__item">
+    <div class="projects__container row">
+        <article class="projects__item col-md-4 text-center">
+            <img src="path/to/project1-image.jpg" alt="Project 1 screenshot" class="projects__image img-fluid" loading="lazy">
             <h3 class="projects__name">Project 1</h3>
             <p class="projects__description">A brief description of project 1</p>
-        </div>
-        <div class="projects__item">
+            <a href="https://link-to-project1.com" class="btn btn-primary">View Project</a>
+        </article>
+        <article class="projects__item col-md-4 text-center">
+            <img src="path/to/project2-image.jpg" alt="Project 2 screenshot" class="projects__image img-fluid" loading="lazy">
             <h3 class="projects__name">Project 2</h3>
             <p class="projects__description">A brief description of project 2</p>
-        </div>
-        <div class="projects__item">
+            <a href="https://link-to-project2.com" class="btn btn-primary">View Project</a>
+        </article>
+        <article class="projects__item col-md-4 text-center">
+            <img src="path/to/project3-image.jpg" alt="Project 3 screenshot" class="projects__image img-fluid" loading="lazy">
             <h3 class="projects__name">Project 3</h3>
             <p class="projects__description">A brief description of project 3</p>
-        </div>
+            <a href="https://link-to-project3.com" class="btn btn-primary">View Project</a>
+        </article>
     </div>
 </section>
+
 
 <section class="contact py-5" id="contact">
     <h2 class="contact__title">Contact</h2>
@@ -221,12 +233,22 @@
 </section>
 </main>
 
-<footer class="footer">
-    <p class="footer__text">&copy; 2024 Ana Caroline Demier. All rights reserved.</p>
-    <div class="footer__social">
-        <a href="#" class="footer__link">LinkedIn</a>
-        <a href="#" class="footer__link">GitHub</a>
-    </div>
-</footer>
+    <footer class="footer py-5">
+        <div class="container">
+            <p class="footer__text text-center">
+                All content © 2024 Ana Caroline Demier.
+            </p>
+            <ul class="footer__social list-unstyled text-center">
+                <li class="footer__social-link"><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                <li class="footer__social-link"><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                <li class="footer__social-link"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
 
-<script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybU5gPkvL5H3bRnsWZq/7sU4Y7XwxhFGF1d4Ac/u+L0KmA5L8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-+qiXwfrDTTThcZek5k7zUVMr4ZB4DnxB2p4O5PfJVD2ok8J8fONcHiS3VdWmW6Rm" crossorigin="anonymous"></script>
+</body>
+</html>

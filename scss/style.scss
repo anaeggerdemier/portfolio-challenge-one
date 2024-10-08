@@ -73,6 +73,7 @@ a {
   }
 
   .navigation {
+
     &__list {
       list-style: none;
       padding: 0;
@@ -98,26 +99,34 @@ a {
 
 @media (max-width: 768px) { 
   .menu-toggle {
-    display: block;
+    display: block; 
   }
 
   .navigation {
+    display: none; 
+
     &__list {
-      display: none;
       flex-direction: column;
       position: absolute;
       top: 3.75rem;
       right: 0;
       background-color: $primary-color;
       width: 12.5rem;
+      margin: 0; 
+      padding: 0;
+      list-style: none; 
 
       &__item {
-        margin: 1rem 0;
+        margin: 1rem 0; 
       }
     }
 
-    &__list.show {
-      display: flex;
+    &.active {
+      display: block; 
+      
+      &__list {
+        display: flex; 
+      }
     }
   }
 }
@@ -342,47 +351,75 @@ a {
   text-align: center; 
 
   &__title {
-    font-family: $font-family;
+    font-family: $font-family; 
     font-weight: 700;
-    font-size: 2rem;  
+    font-size: 2.5rem; 
     margin-bottom: 2rem; 
-    color: #464646; 
+    color: #333; 
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  &__container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin: 0 auto;
+    max-width: 75rem; 
+    width: 100%; 
+    padding: 0 1rem; 
   }
 
   &__item {
-    background: $primary-color; 
-    border-radius: 0.5rem;
-    padding: 2rem; 
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    background: white; 
+    border-radius: 0.75rem; 
+    padding: 1.5rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s; 
 
     &:hover {
-      transform: scale(1.02); 
+      transform: translateY(-3px); 
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+    }
+
+    &__image {
+      border-radius: 0.5rem; 
+      margin-bottom: 1rem; 
+      width: 100%; 
+      max-height: 150px; 
+      object-fit: cover; 
     }
 
     &__name {
-      font-family: $font-family;
-      font-size: 1.75rem; 
-      font-weight: 600;
-      margin-bottom: 1rem; 
-      color: #464646; 
+      font-family: $font-family; 
+      font-size: 1.5rem; 
+      font-weight: 600; 
+      margin: 0.5rem 0; 
+      color: #333; 
     }
 
     &__description {
       font-family: $font-heading-family;
-      font-size: 1rem; 
-      color: $text-color; 
+      font-size: 0.9rem; 
+      color: #555; 
       line-height: 1.5; 
+      margin-bottom: 1rem; 
+    }
+
+    .btn {
+      display: inline-block; 
+      padding: 0.75rem 1.5rem; 
+      font-size: 0.95rem; 
+      color: white; 
+      background-color: $primary-color; 
+      border: none; 
+      border-radius: 0.5rem; 
+      transition: background-color 0.2s; 
+
+      &:hover {
+        background-color: darken($primary-color, 5%); 
+      }
     }
   }
 }
