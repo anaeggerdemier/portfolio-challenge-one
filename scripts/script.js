@@ -3,6 +3,8 @@
     const nav = document.querySelector('.navigation');
 
     if (menuToggle && nav) {
+        nav.setAttribute('role', 'navigation'); 
+
         const toggleNavigation = () => {
             nav.classList.toggle('active');
             const isExpanded = nav.classList.contains('active');
