@@ -1,7 +1,7 @@
 $primary-color: #ebded4; 
 $secondary-color: #ebded4; 
-$background-color: #FFFFFF; 
-$contrast-color: #c63c54; 
+$background-color: #f8f6f4; 
+$contrast-color: #bc2649; 
 $text-color: #333; 
 $link-hover-color: darken($contrast-color, 15%); 
 $border-color: #c8c8c8; 
@@ -59,8 +59,14 @@ a {
   align-items: center;
 
   &__title {
-    font-size: 2rem;
+    font-size: 2.5rem; 
     margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: lighten($text-color, 10%);
+    }
   }
 
   .menu-toggle {
@@ -69,27 +75,50 @@ a {
     color: $contrast-color;
     cursor: pointer;
     font-size: 1.5rem;
-    display: none; 
+    display: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      color: lighten($contrast-color, 10%);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   .navigation {
+    display: flex;
+    align-items: center;
 
     &__list {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
+      gap: 1rem;
 
       &__item {
-        margin: 0 1rem;
-
         a {
           color: $text-color;
           text-decoration: none;
-          transition: color 0.3s;
+          padding: 0.5rem 1rem;
+          transition: color 0.3s ease, background-color 0.3s ease;
 
           &:hover {
-            color: $contrast-color;
+            color: white;
+            background-color: lighten($contrast-color, 10%);
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          }
+
+          &:focus {
+            outline: 2px solid $contrast-color;
+            border-radius: 4px;
+          }
+
+          &:active {
+            background-color: darken($contrast-color, 10%);
           }
         }
       }
@@ -99,92 +128,85 @@ a {
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; 
+    display: block;
   }
 
   .navigation {
     display: none;
 
     &.active {
-      display: block;
-    }
-
-    &__list {
-      flex-direction: column;
-      background-color: $primary-color;
+      display: flex; 
+      flex-direction: column; 
       position: absolute;
       top: 3.5rem;
       right: 0;
       width: 100%;
+      background-color: $primary-color;
       text-align: center;
-      gap: 1rem;
       padding: 1rem 0;
 
-      &__item a {
-        padding: 0.5rem; 
+      &__list {
+        gap: 1rem;
 
-        &:hover {
-          color: $contrast-color; 
-          border-radius: 4px; 
+        &__item {
+          a {
+            padding: 1rem; 
+
+            &:hover {
+              color: $contrast-color;
+              border-radius: 4px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+          }
         }
       }
     }
   }
 }
 
+
 // --------------------------------- Hero ---------------------------------
 
 .hero {
-  background-color: $primary-color;
+  background-color: $secondary-color;
   color: $text-color;
-  padding: 5rem 0;
+  padding: 5rem 1rem; 
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; 
   align-items: center;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
+  &__illustration {
+    flex: 1 1 50%; 
+    max-width: 27rem;
+    height: auto; 
+    margin-right: 2rem; 
+  }
+
+  &__content {
+    display: flex;
     flex-direction: column;
-    padding: 3rem 1rem;
+    align-items: flex-start; 
+    padding: 0;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+    max-width: $container-width;
 
-      &__image {
-        order: -1;
-      }
-    }
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
-      gap: 1.5rem;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 46.9375rem;
-
-    .hero__title {
-      font-size: 3rem;
-      text-align: left;
+    &__title {
+      font-family: $font-heading-family; 
+      font-size: 3rem; 
+      text-align: left; 
+      font-weight: bold; 
     }
 
     &__subtitle {
+      text-align: left;
       font-family: $font-heading-family;
       font-size: 1.25rem;
       margin-bottom: 0;
     }
   }
-
-    &__image {
-      display: block;
-      max-width: 100%; 
-      width: 23rem; 
-      height: 23rem; 
-      object-fit: cover; 
-      object-position: center 5%;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin: 0 2rem 0 0;
-    }  
 }
 
 .social-links {
@@ -194,25 +216,56 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem; 
 
-    &__item {
-      margin: 0 1rem;
+  &__item {
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s; 
 
-      a {
-        color: $text-color;
-        text-decoration: none;
-        transition: color 0.3s;
+      &:hover,
+      &:focus {
+        color: white; 
+        transform: scale(1.05); 
+      }
 
-        &:hover {
-          color: $contrast-color;
-        }
-
-        img {
-          margin-left: 0.7rem;
-        }
+      img {
+        margin-left: 0.7rem;
       }
     }
+  }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; 
+    align-items: center; 
+
+    &__illustration {
+      margin-right: 0; 
+      margin-bottom: 2rem; 
+    }
+
+    &__content {
+      align-items: center; 
+      text-align: center;
+
+      &__title {
+        font-size: 2rem; 
+      }
+
+      &__subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .social-links {
+    justify-content: center; 
+  }
+}
+
 
 // --------------------------------- About ---------------------------------
 
@@ -239,56 +292,29 @@ a {
 
 // --------------------------------- Skills ---------------------------------
 
-.skills, .hobbies {
-  padding: 3rem 0;
+.skills {
+  padding: 5rem 0;
 
   &__title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
   }
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-    gap: 1rem;
-  }
-
-  &__item {
-    background-color: $secondary-color;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 7.5rem;
-
-    &:hover {
-      transform: translateY(-0.125rem);
-    }
-
-    &__icon {
-      width: 1.875rem;
-      height: auto;
-    }
-
-    &__name {
-      font-family: $font-heading-family;
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-    }
+  &__text {
+    font-family: $font-heading-family;
+    margin-bottom: 1rem;
   }
 }
 
-// --------------------------------- Profissional  ---------------------------------
+// --------------------------------- Profissional ---------------------------------
 
 .features {
-  padding: 5rem 0;
+  padding: 5rem 0; 
 
   .skills__title {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
+    font-size: 2.5rem; 
+    margin-bottom: 4rem; 
     text-align: center;
   }
 
@@ -313,7 +339,7 @@ a {
     h3 {
       font-size: 1.75rem;
       margin-bottom: 1.5rem;
-      color: #333;
+      color: $text-color; 
     }
 
     p {
@@ -333,7 +359,7 @@ a {
         margin-bottom: 1rem;
         
         i {
-          color: #1abc9c;
+          color: $contrast-color; 
           font-size: 1.25rem;
           margin-right: 0.5rem;
         }
@@ -365,7 +391,7 @@ a {
 // --------------------------------- Education ---------------------------------
 
 .education {
-  padding: 5rem 0;
+  padding: 5rem 0; 
 
   &__title {
     font-family: $font-heading-family;
@@ -424,11 +450,12 @@ a {
   }
 }
 
+
 // --------------------------------- Projects ---------------------------------
 
 .projects {
-  padding: 5rem 0;
-  background: $background-color;
+  padding: 5rem 0; 
+  background: $background-color; 
   border-radius: 1rem; 
   text-align: center; 
 
@@ -500,10 +527,6 @@ a {
       border: none; 
       border-radius: 0.5rem; 
       transition: background-color 0.2s; 
-
-      &:hover {
-        background-color: darken($primary-color, 5%); 
-      }
     }
   }
 }

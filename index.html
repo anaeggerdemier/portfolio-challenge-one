@@ -25,29 +25,27 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title fw-bold">Ana Caroline Demier</h1>
-        <button class="menu-toggle" aria-label="Toggle menu">
+    <header class="header" role="banner">
+        <h1 class="header__title">Portfolio</h1>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
             <i class="fas fa-bars"></i>
         </button>
         <nav class="navigation" aria-label="Main navigation">
             <ul class="navigation__list">
-                <li class="navigation__list__item"><a href="#about" aria-label="About me">About me</a></li>
-                <li class="navigation__list__item"><a href="#skills" aria-label="Skills">Skills</a></li>
-                <li class="navigation__list__item"><a href="#hobbies" aria-label="Hobbies">Hobbies</a></li>
-                <li class="navigation__list__item"><a href="#education" aria-label="Education">Education</a></li>
-                <li class="navigation__list__item"><a href="#projects" aria-label="Projects">Projects</a></li>
-                <li class="navigation__list__item"><a href="#contact" aria-label="Contact">Contact</a></li>
+                <li class="navigation__list__item"><a href="#about" aria-label="About me">About</a></li>
+                <li class="navigation__list__item"><a href="#skills" aria-label="Services offered">Services</a></li>
+                <li class="navigation__list__item"><a href="#education" aria-label="My educational background">Education</a></li>
+                <li class="navigation__list__item"><a href="#projects" aria-label="My projects">Projects</a></li>
+                <li class="navigation__list__item"><a href="#contact" aria-label="Get in touch">Contact</a></li>
             </ul>
         </nav>
     </header>    
-
     <main>
         <section class="hero">
+            <img src="assets/girl-sitting.svg" alt="Descrição da ilustração" class="hero__illustration" /> 
             <div class="hero__content">
-                <h2 class="hero__title fw-bold">Howdy! I'm Ana and I am a software developer</h2>
-                <p class="hero__subtitle">I'm an IT Systems Analysis and Development student, and I am currently participating in the Oracle ONE project at Alura Latam</p>
-                
+                <h2 class="hero__title">Howdy! I'm Ana and I am a Software Developer</h2>
+                <p class="hero__subtitle text-center">I'm an IT Systems Analysis and Development student, and I am currently participating in the <strong>ONE + Alura</strong></p>
                 <!-- Links para as redes sociais -->
                 <ul class="social-links">
                     <li class="social-links__item mb-3">
@@ -71,14 +69,12 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-            
-            <img class="hero__image" src="assets/profile.jpg" alt="Photo of Ana Caroline Demier smiling" loading="lazy">
+            </div>       
         </section>        
 
         <section class="about py-5" id="about">
             <div class="container">
-                <h2 class="about__title">Sobre mim</h2>
+                <h2 class="about__title">About Me</h2>
                 <p class="about__text">
                     I am a <strong>Software Developer</strong> focused on fostering collaboration and creating inclusive solutions, 
                     with a strong emphasis on <strong>User Experience (UX)</strong>
@@ -95,50 +91,17 @@
         </section>        
 
         <section class="skills py-5" id="skills">
-            <h2 class="skills__title text-center">Skills</h2>
-            <ul class="skills__list list-unstyled d-grid gap-3">
-                <li class="skills__item text-center">
-                    <div class="skills__container">
-                        <img class="skills__icon" src="assets/javascript.svg" alt="JavaScript icon" loading="lazy">
-                        <p class="skills__name d-none">JavaScript</p>
-                    </div>
-                </li>
-                <li class="skills__item text-center">
-                    <div class="skills__container">
-                        <img class="skills__icon" src="assets/typescript.svg" alt="PHP icon" loading="lazy">
-                        <p class="skills__name d-none">Typescript</p>
-                    </div>
-                </li>
-                <li class="skills__item text-center">
-                    <div class="skills__container">
-                        <img class="skills__icon" src="assets/nodejs.svg" alt="Node.js icon" loading="lazy">
-                        <p class="skills__name d-none">Node.js</p>
-                    </div>
-                </li>
-                <li class="skills__item text-center">
-                    <div class="skills__container">
-                        <img class="skills__icon" src="assets/react.svg" alt="React icon" loading="lazy">
-                        <p class="skills__name d-none">React</p>
-                    </div>
-                </li>
-                <li class="skills__item text-center">
-                    <div class="skills__container text-center">
-                        <img class="skills__icon" src="assets/git.svg" alt="HTML 5 icon" loading="lazy">
-                        <p class="skills__name d-none">Git/Github</p>
-                    </div>
-                </li>
-                <li class="skills__item text-center">
-                    <div class="skills__container">
-                        <img class="skills__icon" src="assets/sass.svg" alt="CSS icon" loading="lazy">
-                        <p class="skills__name d-none">CSS</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
+            <div class="container">
+                <h2 class="skills__title text-center">Core Skills</h2>
+                <p class="skills__text">
+                    I excel in essential design skills, creating visually stunning and functional digital experiences. 
+                    From UI design to UX research, my passion is to craft effective and memorable digital solutions.
+                </p>
+        </section>   
 
         <section class="features py-5" id="features">
             <div class="container">
-              <h2 class="skills__title text-center">What I Do:</h2>
+              <h2 class="skills__title text-center">Services</h2>
           
               <div class="row gy-4 align-items-center features-item">
                 <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
@@ -159,7 +122,7 @@
           
               <div class="row gy-4 align-items-center features-item">
                 <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                  <img src="assets/CODING.svg" class="img-fluid" alt="Web Design icon">
+                  <img src="assets/ACESSIBILITY.svg" class="img-fluid" alt="Web Design icon">
                 </div>
                 <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
                   <h3>Web Design</h3>
@@ -176,7 +139,7 @@
           
               <div class="row gy-4 align-items-center features-item">
                 <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-                  <img src="assets/ACESSIBILITY.svg" class="img-fluid" alt="UX/UI Design icon">
+                  <img src="assets/CODING2.svg" class="img-fluid" alt="UX/UI Design icon">
                 </div>
                 <div class="col-md-7" data-aos="fade-up">
                   <h3>UX/UI Design</h3>
@@ -202,7 +165,7 @@
           </section>
 
         <section class="projects" id="projects">
-            <h2 class="projects__title">Projects</h2>
+            <h2 class="projects__title">My Portfolio</h2>
             <div class="projects__container row">
                 <article class="projects__item text-center">
                     <img src="path/to/project1-image.jpg" alt="Project 1 screenshot" class="projects__image img-fluid" loading="lazy">
