@@ -44,7 +44,7 @@
         <section class="hero">
             <img src="assets/girl-sitting.svg" alt="Descrição da ilustração" class="hero__illustration" /> 
             <div class="hero__content">
-                <h2 class="hero__title">Howdy! I'm Ana and I am a Software Developer</h2>
+                <h2 class="hero__title fw-bold">Howdy! I'm Ana and I am a Software Developer</h2>
                 <p class="hero__subtitle text-center">I'm an IT Systems Analysis and Development student, and I am currently participating in the <strong>ONE + Alura</strong></p>
                 <!-- Links para as redes sociais -->
                 <ul class="social-links">
@@ -74,7 +74,7 @@
 
         <section class="about py-5" id="about">
             <div class="container">
-                <h2 class="about__title">About Me</h2>
+                <h2 class="about__title fw-bold">About Me</h2>
                 <p class="about__text">
                     I am a <strong>Software Developer</strong> focused on fostering collaboration and creating inclusive solutions, 
                     with a strong emphasis on <strong>User Experience (UX)</strong>
@@ -90,18 +90,37 @@
             </div>
         </section>        
 
-        <section class="skills py-5" id="skills">
+        <section class="skills" id="skills">
             <div class="container">
-                <h2 class="skills__title text-center">Core Skills</h2>
-                <p class="skills__text">
-                    I excel in essential design skills, creating visually stunning and functional digital experiences. 
-                    From UI design to UX research, my passion is to craft effective and memorable digital solutions.
+                <h2 class="skills__title fw-bold">Core Skills</h2>
+                <p class="skills__text text-center">
+                    I excel in essential design skills, focusing on creating visually stunning and highly functional digital experiences. 
+                    Every project presents an opportunity for innovation, and I am dedicated to transforming ideas into intuitive designs that truly resonate with users
                 </p>
-        </section>   
+                <ul class="skills__list">
+                    <li class="skills__item">
+                        <img src="./assets/javascript.svg" alt="JavaScript" class="skill-icon">
+                        <h4 class="skills__item__label d-none">JavaScript</h4>
+                    </li>
+                    <li class="skills__item">
+                        <img src="./assets/typescript.svg" alt="TypeScript" class="skill-icon">
+                        <h4 class="skills__item__label d-none">TypeScript</h4>
+                    </li>
+                    <li class="skills__item">
+                        <img src="./assets/nodejs.svg" alt="Node.js" class="skill-icon">
+                        <h4 class="skills__item__label d-none">Node.js</h4>
+                    </li>
+                    <li class="skills__item">
+                        <img src="./assets/react.svg" alt="React" class="skill-icon">
+                        <h4 class="skills__item__label d-none">React</h4>
+                    </li>
+                </ul>
+            </div>
+        </section>        
 
         <section class="features py-5" id="features">
             <div class="container">
-              <h2 class="skills__title text-center">Services</h2>
+              <h2 class="skills__title text-center fw-bold">Services</h2>
           
               <div class="row gy-4 align-items-center features-item">
                 <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
